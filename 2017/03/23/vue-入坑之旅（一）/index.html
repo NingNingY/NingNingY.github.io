@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/23/vue-入坑之旅（一）/index.html">
 <meta property="og:site_name" content="Hello World">
 <meta property="og:description" content="用vueJs2.0搭建项目">
-<meta property="og:updated_time" content="2017-03-24T03:18:40.056Z">
+<meta property="og:updated_time" content="2017-03-24T03:50:29.180Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue 入坑之旅（一）--实现简单导航">
 <meta name="twitter:description" content="用vueJs2.0搭建项目">
@@ -93,13 +93,15 @@
 <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>万万没想到回来的第一个项目就是用自己一点也不熟悉的vue来完成一个完整的项目，当时各种框架已经定好了，自己只有埋头苦干的份。但是幸运的是，有小师傅在一旁时常给予有力的指点，让我在每一个坑里面徘徊的时间短一点，在这里投以深深地感谢！撒花，撒花……<br>下面的一系列就介绍一下我对vue的简单理解吧，这个过程肯定会在后面不断深化，所以现在就讲一讲最最基本的吧，希望能够对像我当时一样刚刚接触vue的小伙伴一点帮助吧<br>本项目放在我的gitHub上<a href="https://github.com/NingNingY/simple-pages" target="_blank" rel="external">https://github.com/NingNingY/simple-pages</a></p>
 <h2 id="实现简单导航"><a href="#实现简单导航" class="headerlink" title="实现简单导航"></a>实现简单导航</h2><p>本项目用webpack实现各个模块之间的打包，预处理，热加载。它可以帮助我们将多个js文件打包为1个文件入口，并且可以达到按需加载，但这并不是我们使用webpack的唯一原因，更重要的是.vue文件需要进行编译，webpak可以使用一个loader来对.vue文件里的style、js和html进行转换，否则浏览器无法识别<br>本项目仅涉及简单的前端页面，没有实现后台交互，因为页面比较简单，所以没有使用Vuex和vue-resource,但是为了以后的复用性在项目配置的时候都引入了这些库</p>
 <p>###创建项目<br>首先打开命令行工具进入打算进入的项目目录下，以我的项目为例，项目放在E/workplace下<br><img src="" alt="图片1"><br>后面请按照下面步骤一一实现：<br>1.全局安装vue-cli：npm i -g vue-cli<br>2.创建webpack项目并下载依赖：vue init webpack “项目名称”<br>3.进入新创建的项目目录下：cd “项目名称”<br>4.这一步一般比较慢，可以使用淘宝镜像，但是需要进行配置： npm i<br>5.为路由、XHR请求、数据管理下载库（这里使用bootstrap作为UI库：npm i vue-router vue-resource vuex bootstrap –save<br>6.使用npm run dev在热加载中运行<br>注意：如果UI库使用sass则需要配置： npm install node-sass sass-loader –save -dev<br><img src="" alt="图片2"></p>
-<p>###项目基本结构</p>
-<p>###</p>
+<p>###项目基本结构<br><img src="" alt="图片3"></p>
+<p>###配置路由<br><img src="" alt="图片4"></p>
+<p>###子页面<br><img src="" alt="图片5"><br><img src="" alt="图片6"><br><img src="" alt="图片7"></p>
+<p>###过滤器</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/23/vue-入坑之旅（一）/" data-id="cj0n9chz10001t4ivjd7vm2qn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/23/vue-入坑之旅（一）/" data-id="cj0nahays0003o0ivjfxr1573" class="article-share-link">Share</a>
       
       
     </footer>
