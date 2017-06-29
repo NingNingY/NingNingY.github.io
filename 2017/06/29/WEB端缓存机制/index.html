@@ -5,16 +5,16 @@
   
   <title>WEB端缓存机制 | Hello Web</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用vueJs2.0搭建项目">
+  <meta name="description" content="WEB端缓存机制">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WEB端缓存机制">
 <meta property="og:url" content="http://yoursite.com/2017/06/29/WEB端缓存机制/index.html">
 <meta property="og:site_name" content="Hello Web">
-<meta property="og:description" content="用vueJs2.0搭建项目">
-<meta property="og:updated_time" content="2017-06-29T07:52:07.151Z">
+<meta property="og:description" content="WEB端缓存机制">
+<meta property="og:updated_time" content="2017-06-29T09:01:42.026Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WEB端缓存机制">
-<meta name="twitter:description" content="用vueJs2.0搭建项目">
+<meta name="twitter:description" content="WEB端缓存机制">
   
     <link rel="alternate" href="/atom.xml" title="Hello Web" type="application/atom+xml">
   
@@ -89,7 +89,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>用vueJs2.0搭建项目<a id="more"></a></p>
+        <p>WEB端缓存机制<a id="more"></a></p>
+<h2 id="什么是WEB缓存"><a href="#什么是WEB缓存" class="headerlink" title="什么是WEB缓存"></a>什么是WEB缓存</h2><p>Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。比较常见的就是浏览器会缓存访问过网站的网页，当再次访问这个URL地址的时候，如果网页没有更新，就不会再次下载网页，而是直接使用本地缓存的网页。只有当网站明确标识资源已经更新，浏览器才会再次下载网页</p>
+<p>###数据库数据缓存<br>数据库数据缓存的实质就是将频繁使用的数据从数据库（硬盘）存到内存中，而内存的读取速度远远快于直接在磁盘读取的速度。至于为什么会有明显的速度差异，浅显的理解是因为内存是电存储，硬盘存储是磁存储。电的速度远远大于磁盘（相当于磁带转动的速度）的速度。即使现在出现了固态硬盘但还仅仅只是在磁盘的基础上有所提高。</p>
+<p>###服务器端缓存</p>
+<p>####代理服务器缓存<br>代理服务器是浏览器和源服务器之间的中间服务器，浏览器先向这个中间服务器发起Web请求，经过处理后（比如权限验证，缓存匹配等），再将请求转发到源服务器。代理服务器缓存的运作原理跟浏览器的运作原理差不多，只是规模更大。可以把它理解为一个共享缓存，不只为一个用户服务，一般为大量用户提供服务，因此在减少相应时间和带宽使用方面很有效，同一个副本会被重用多次。</p>
 
       
     </div>
