@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/29/WEB端缓存机制/index.html">
 <meta property="og:site_name" content="Hello Web">
 <meta property="og:description" content="WEB端缓存机制">
-<meta property="og:updated_time" content="2017-06-29T09:01:42.026Z">
+<meta property="og:updated_time" content="2017-07-05T02:53:55.489Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WEB端缓存机制">
 <meta name="twitter:description" content="WEB端缓存机制">
@@ -91,14 +91,15 @@
       
         <p>WEB端缓存机制<a id="more"></a></p>
 <h2 id="什么是WEB缓存"><a href="#什么是WEB缓存" class="headerlink" title="什么是WEB缓存"></a>什么是WEB缓存</h2><p>Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。比较常见的就是浏览器会缓存访问过网站的网页，当再次访问这个URL地址的时候，如果网页没有更新，就不会再次下载网页，而是直接使用本地缓存的网页。只有当网站明确标识资源已经更新，浏览器才会再次下载网页</p>
-<p>###数据库数据缓存<br>数据库数据缓存的实质就是将频繁使用的数据从数据库（硬盘）存到内存中，而内存的读取速度远远快于直接在磁盘读取的速度。至于为什么会有明显的速度差异，浅显的理解是因为内存是电存储，硬盘存储是磁存储。电的速度远远大于磁盘（相当于磁带转动的速度）的速度。即使现在出现了固态硬盘但还仅仅只是在磁盘的基础上有所提高。</p>
-<p>###服务器端缓存</p>
-<p>####代理服务器缓存<br>代理服务器是浏览器和源服务器之间的中间服务器，浏览器先向这个中间服务器发起Web请求，经过处理后（比如权限验证，缓存匹配等），再将请求转发到源服务器。代理服务器缓存的运作原理跟浏览器的运作原理差不多，只是规模更大。可以把它理解为一个共享缓存，不只为一个用户服务，一般为大量用户提供服务，因此在减少相应时间和带宽使用方面很有效，同一个副本会被重用多次。</p>
-
+<h3 id="数据库数据缓存"><a href="#数据库数据缓存" class="headerlink" title="数据库数据缓存"></a>数据库数据缓存</h3><p>数据库数据缓存的实质就是将频繁使用的数据从数据库（硬盘）存到内存中，而内存的读取速度远远快于直接在磁盘读取的速度。至于为什么会有明显的速度差异，浅显的理解是因为内存是电存储，硬盘存储是磁存储。电的速度远远大于磁盘（相当于磁带转动的速度）的速度。即使现在出现了固态硬盘但还仅仅只是在磁盘的基础上有所提高。</p>
+<h3 id="服务器端缓存"><a href="#服务器端缓存" class="headerlink" title="服务器端缓存"></a>服务器端缓存</h3><h4 id="代理服务器缓存"><a href="#代理服务器缓存" class="headerlink" title="代理服务器缓存"></a>代理服务器缓存</h4><p>代理服务器是浏览器和源服务器之间的中间服务器，浏览器先向这个中间服务器发起Web请求，经过处理后（比如权限验证，缓存匹配等），再将请求转发到源服务器。代理服务器缓存的运作原理跟浏览器的运作原理差不多，只是规模更大。可以把它理解为一个共享缓存，不只为一个用户服务，一般为大量用户提供服务，因此在减少相应时间和带宽使用方面很有效，同一个副本会被重用多次。</p>
+<h4 id="CDN缓存"><a href="#CDN缓存" class="headerlink" title="CDN缓存"></a>CDN缓存</h4><p>CDN（Content delivery networks）缓存，也叫网关缓存、反向代理缓存。CDN缓存一般是由网站管理员自己部署，为了让他们的网站更容易扩展并获得更好的性能。浏览器先向CDN网关发起Web请求，网关服务器后面对应着一台或多台负载均衡源服务器，会根据它们的负载请求，动态将请求转发到合适的源服务器上。虽然这种架构负载均衡源服务器之间的缓存没法共享，但却拥有更好的外扩展性。</p>
+<h4 id="应用层缓存"><a href="#应用层缓存" class="headerlink" title="应用层缓存"></a>应用层缓存</h4><p>应用层缓存是指我们在代码层面上做的缓存。通过代码逻辑，把曾经请求过的数据或资源等，缓存起来，再次需要数据时通过逻辑上的处理选择可用的缓存的数据</p>
+<h3 id="浏览器端缓存"><a href="#浏览器端缓存" class="headerlink" title="浏览器端缓存"></a>浏览器端缓存</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/29/WEB端缓存机制/" data-id="cj4i4vpmn0009b0iv2oikhugw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/29/WEB端缓存机制/" data-id="cj4qev5ph0005xwivf4h7crpz" class="article-share-link">Share</a>
       
       
     </footer>
